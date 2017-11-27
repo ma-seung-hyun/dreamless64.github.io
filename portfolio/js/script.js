@@ -14,32 +14,37 @@ var introPos = function(){
       // 'top':  $h1.outerHeight()/2,
       // 'left': $win.width()/2 - $h1.outerWidth()/2
     });
-    $arr.css({
-      'top': $win.height()/2 - 15,
-    });
-    // console.log($h1.width());
+    $arr.css({'top': $win.height()/2 - 15,});
 };
 
 var introPos = function(){
   var $h1 = $('h1'),
       $arr = $('.intro_imgbox .intro_arrowbox'),
       $imgbox = $('.intro_imgbox');
-  $arr.css({
-    'top': $imgbox.height()/2  -15
-  });
+  // $arr.css({'top': $imgbox.height()/2  -15});
 };
 
 var navFunc = function(){
   var $nav = $('nav'),
-      $togBtn = $('.nav_toggleBtn');
+      $togBtn = $('.nav_toggleBtn'),
+      $secIntro = $('.section_intro');
 
   $togBtn.on('click', function(){
     $nav.toggleClass('active');
+    $(this).toggleClass('active');
     if($nav.hasClass('active')){
-
+      console.log('있음');
+      $nav.stop().animate({
+        'height':100+'%'
+      },1000,'easeOutBounce');
+      $secIntro.css({'filter':'blur(2px)'});
     }else{
-
-    }
+      $secIntro.css({'filter':'blur(0px)'});
+      console.log('없음');
+      $nav.stop().animate({
+        'height':0+'%'
+      },800,'easeOutQuint');
+    };
     // $nav.stop().animate({
     //   'height':100+'%'
     // },500,'easeInOutCubic');
@@ -57,7 +62,9 @@ var introHover = function(){
       $arrR = $('.intro_imgbox-rightbox .intro_arrowbox'),
       $txtL = $('.intro_imgbox-leftbox .intro_textbox'),
       $txtR = $('.intro_imgbox-rightbox .intro_textbox'),
-      $nick = $('.intro_nickname');
+      $nick = $('.intro_nickname'),
+      $boxHL = $('.intro_imgbox-leftbox .intro_imgbox-box_h'),
+      $boxHR = $('.intro_imgbox-rightbox .intro_imgbox-box_h');
 
   $imgbox.hover(function(){
     $left.on('mouseenter', function(){
@@ -75,8 +82,16 @@ var introHover = function(){
       $right.stop().css({'background-color':'#fe1'},500,'easeInOutCubic');
       $arrL.stop().animate({'opacity':0.4,'left':10+'%'},500,'easeOutQuint');
       $arrR.stop().animate({'opacity':0,'right':3+'%'});
-      $txtL.stop().animate({'opacity':1,'left':10+'%'},1800,'easeOutQuint');
+      $txtL.stop().animate({'opacity':1,'left':10+'%'},2000,'easeOutQuint');
       $txtR.stop().animate({'opacity':0,'right':3+'%'});
+      $boxHL.stop().animate({
+        'opacity':0,
+        'left':3+'%'
+      },600,'easeOutQuint');
+      $boxHR.stop().animate({
+        'opacity':1,
+        'right':10+'%'
+      },600,'easeInQuint');
     });
     $right.on('mouseenter', function(){
       $leftVi.stop().animate({
@@ -94,7 +109,15 @@ var introHover = function(){
       $arrL.stop().animate({'opacity':0,'left':3+'%'});
       $arrR.stop().animate({'opacity':0.4,'right':10+'%'},500,'easeOutQuint');
       $txtL.stop().animate({'opacity':0,'left':3+'%'});
-      $txtR.stop().animate({'opacity':1,'right':10+'%'},1800,'easeOutQuint');
+      $txtR.stop().animate({'opacity':1,'right':10+'%'},2000,'easeOutQuint');
+      $boxHL.stop().animate({
+        'opacity':1,
+        'left':10+'%'
+      },600,'easeInQuint');
+      $boxHR.stop().animate({
+        'opacity':0,
+        'right':3+'%'
+      },600,'easeOutQuint');
     });
   },function(){
     $leftVi.stop().animate({
@@ -114,7 +137,17 @@ var introHover = function(){
     $arrR.stop().animate({'opacity':0,'right':3+'%'});
     $txtL.stop().animate({'opacity':0,'left':3+'%'});
     $txtR.stop().animate({'opacity':0,'right':3+'%'});
+    $boxHL.stop().animate({
+      'opacity':1,
+      'left':10+'%'
+    });
+    $boxHR.stop().animate({
+      'opacity':1,
+      'right':10+'%'
+    });
+
   });
+
   $imgbox.trigger('mouseenter');
 
   $imgbox.hover(function(){
@@ -137,7 +170,6 @@ var readyAndResize = function(){
 $win.resize(readyAndResize);
 justReady();
 $win.trigger('resize');
-
 
 });//document ready --;
 })(jQuery);

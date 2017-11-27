@@ -8,7 +8,7 @@ font-family: 'Noto Sans KR', sans-serif;
 
 /*open sans*/
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
 
 /*
 font-family: 'Open Sans', sans-serif;
@@ -24,6 +24,12 @@ font-family: 'Nanum Gothic', sans-serif;
 /*@import url('https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css');*/
 /*
 font-family: 'Nanum Myeongjo', serif;
+ */
+
+ /*shadow into light*/
+ @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+ /*
+ font-family: 'Shadows Into Light', cursive;
  */
 
  @font-face {

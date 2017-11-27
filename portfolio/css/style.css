@@ -10,41 +10,26 @@ body{
   letter-spacing: -1px;
 }
 section.section_intro{height: 100%; position: relative;}
-/******************************************************************************
-███    ██  █████  ██    ██
-████   ██ ██   ██ ██    ██
-██ ██  ██ ███████ ██    ██
-██  ██ ██ ██   ██  ██  ██
-██   ████ ██   ██   ████
-******************************************************************************/
+
 nav{
   width: 100%; height: 0;
   position: fixed;
   z-index: 9999;
-  background-color: rgba(51, 51, 51, 0.51);
+  background-color: rgba(0, 0, 0, 0.74);
 }
 .nav_toggleBtn{
-  position: absolute; right: 9px; top: 20px;
+  z-index: 9999;
+  position: fixed; right: 24px; top: 20px;
   display: inline-block;
   cursor: pointer;
-  width: 50px; height: 30px;
-  background-color: #111;
-  background: url(../img/menu_icon.png) no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-  opacity: 0.6;
+  width: 50px; height: 50px;
+  background: url(../img/icons.png) no-repeat;
+  background-size: 200%;
+  background-position: 0 0;
 }
-.nav_toggleBtn:hover{
-  right: 20px;
-  opacity: 1;
-}
-/******************************************************************************
-███    ██  █████  ██    ██
-████   ██ ██   ██ ██    ██
-██ ██  ██ ███████ ██    ██
-██  ██ ██ ██   ██  ██  ██
-██   ████ ██   ██   ████
-******************************************************************************/
+.nav_toggleBtn:hover{right: 34px;}
+.nav_toggleBtn.active{background-position: -50px 0;}
+
 h1{
   letter-spacing: 4px;
   width: 100%;
@@ -56,28 +41,23 @@ h1{
   text-align: center;
   font-size: 20px;
 }
-h1::before{
-  /*content: '';
-  width: 24px; height: 24px;
-  margin-right: 20px;
-  position: relative; top: 5px;
-  background: url(../img/intro_icon.png) no-repeat;
-  background-size: contain;
+h1::before, h1::after{
+  content: '';
+  width: 20px; height: 1px;
+  border-radius: 20px;
+  background-color: #666;
   display: inline-block;
-  opacity: 0.7;*/
+  position: relative; bottom: 6px;
+  margin-right: 20px; margin-left: 10px;
 }
 .intro_nickname{
-  width: 100%;
+  width: 100%; text-align: center;
   overflow: hidden;
-  z-index: 4;
-  color: rgba(255, 255, 255,0.98);
-  font-size: 30px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  font-weight: bold;
-  letter-spacing: -1px;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 1);
+  font-size: 46px; font-family: 'Shadows Into Light', cursive;
+  position: absolute; top: 50%; z-index: 4;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 .intro_imgbox{
   position: absolute;
@@ -93,6 +73,40 @@ h1::before{
   cursor: pointer;
 }
 .intro_imgbox-leftbox{position: relative;}
+.intro_imgbox-box_h{
+  position: absolute;
+  z-index: 5;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: -5px;
+  line-height: 70px;
+  /*text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.35);*/
+}
+.intro_imgbox-leftbox .intro_imgbox-box_h{
+  top: 50px; left: 10%;
+  color: #222;
+  text-align: left;
+}
+.intro_imgbox-rightbox .intro_imgbox-box_h{
+  text-align: right;
+  bottom: 50px; right: 10%;
+  color: #fff;
+}
+.intro_imgbox-box_img{
+  position: absolute;
+  display: inline-block;
+  width: 50px; height: 50px;
+  background: url(../img/icons.png) no-repeat;
+  background-size: 100px;
+}
+.intro_imgbox-leftbox .intro_imgbox-box_img{
+  top: 12px; right: 44px;
+  background-position: 0 -100px;
+}
+.intro_imgbox-rightbox .intro_imgbox-box_img{
+  bottom: 6px; left: -40px;
+  background-position: -50px -100px;
+}
 .intro_imgbox-leftbox-white_img{
   width: 48.12%; height: 110%;
   position: absolute; top: 0; left: 0;
@@ -129,7 +143,7 @@ h1::before{
 }
 .intro_textbox{
   padding: 0 16px;
-  position: absolute; top: 6%;
+  position: absolute;
   z-index: 2;
   color: rgba(0, 0, 0, 0.7);
   opacity: 0;
@@ -141,27 +155,30 @@ h1::before{
 }
 .intro_imgbox-leftbox .intro_textbox{
   text-align: left;
-  left: 10px;
+  top: 10%; left: 10px;
   border-left: 1px solid rgba(0, 0, 0, 0.36);
 }
 .intro_imgbox-rightbox .intro_textbox{
   border-right: 1px solid rgba(0, 0, 0, 0.36);
   text-align: right;
-  right: 10px;
+  bottom: 10%; right: 10px;
 }
 .intro_arrowbox{
   width: 46px; height: 46px;
   background: url(../img/arr_icon_b.png) no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
-  position: absolute; top: 0;
+  position: absolute;
   z-index: 999;
   opacity: 0;
 }
-.intro_imgbox-leftbox .intro_arrowbox{left: 3%;}
+.intro_imgbox-leftbox .intro_arrowbox{
+  left: 3%;
+  bottom: 10%;
+}
 .intro_imgbox-rightbox .intro_arrowbox{
   transform: rotate(180deg);
-  right: 3%;
+  top: 10%; right: 3%;
 }
 .intro_imgbox-leftbox:hover .intro_imgbox-leftbox-code_img{
   filter: grayscale(0%);
