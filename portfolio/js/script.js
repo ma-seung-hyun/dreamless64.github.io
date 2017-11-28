@@ -1,8 +1,17 @@
 (function($){
 $(document).ready(function(){
 // code start!!
+var mql = window.matchMedia("screen and (max-width: 639px)");
 
-// selecting
+
+mql.addListener(function(e) {
+    if(e.matches) {
+        console.log('모바일 화면 입니다.');
+    } else {
+        console.log('데스크탑 화면 입니다.');
+    }
+});
+
 var $win = $(window);
 // intro
 var introPos = function(){
@@ -36,8 +45,8 @@ var navFunc = function(){
       console.log('있음');
       $nav.stop().animate({
         'height':100+'%'
-      },1000,'easeOutBounce');
-      $secIntro.css({'filter':'blur(2px)'});
+      },600,'easeOutBounce');
+      $secIntro.css({'filter':'blur(3px)'});
     }else{
       $secIntro.css({'filter':'blur(0px)'});
       console.log('없음');
@@ -70,15 +79,15 @@ var introHover = function(){
     $left.on('mouseenter', function(){
       $leftVi.stop().animate({
         'opacity': '0.98',
-        'right': '-'+ 43+'%'
+        'right': '-'+ 38+'%'
       },500,'easeInOutCubic');
+      $rightVi.stop().animate({'left':'-'+62.5 +'%'},500,'easeInOutCubic');
       $leftWi.stop().animate({
         'opacity': '0.98',
-        'left':'-'+5+'%',
+        'left':'-'+10+'%',
         'padding-left':0
       },500,'easeInOutCubic');
       $leftCi.stop().animate({'background-position': '10%'},500,'easeInOutCubic');
-      $rightVi.stop().animate({'left':'-'+57.5 +'%'},500,'easeInOutCubic');
       $right.stop().css({'background-color':'#fe1'},500,'easeInOutCubic');
       $arrL.stop().animate({'opacity':0.4,'left':10+'%'},500,'easeOutQuint');
       $arrR.stop().animate({'opacity':0,'right':3+'%'});
@@ -87,24 +96,24 @@ var introHover = function(){
       $boxHL.stop().animate({
         'opacity':0,
         'left':3+'%'
-      },600,'easeOutQuint');
+      });
       $boxHR.stop().animate({
         'opacity':1,
         'right':10+'%'
-      },600,'easeInQuint');
+      });
     });
     $right.on('mouseenter', function(){
       $leftVi.stop().animate({
-        'right': '-'+ 53+'%',
+        'right': '-'+ 58+'%',
         'opacity':1
       },500,'easeInOutCubic');
+      $rightVi.stop().animate({'left':'-'+42.5 +'%'},500,'easeInOutCubic');
       $leftWi.stop().animate({
         'left':0,
-        'padding-left': 5+'%',
+        'padding-left': 10+'%',
         'opacity':1
       },500,'easeInOutCubic');
       $leftCi.stop().animate({'background-position': '-5%'},800,'easeInOutCubic');
-      $rightVi.stop().animate({'left':'-'+47.5 +'%'},500,'easeInOutCubic');
       $right.stop().css({'background-color':'#fff9a7'});
       $arrL.stop().animate({'opacity':0,'left':3+'%'});
       $arrR.stop().animate({'opacity':0.4,'right':10+'%'},500,'easeOutQuint');
@@ -113,24 +122,24 @@ var introHover = function(){
       $boxHL.stop().animate({
         'opacity':1,
         'left':10+'%'
-      },600,'easeInQuint');
+      });
       $boxHR.stop().animate({
         'opacity':0,
         'right':3+'%'
-      },600,'easeOutQuint');
+      });
     });
   },function(){
     $leftVi.stop().animate({
       'right': '-'+ 48+'%',
       'opacity':1
     },500,'easeInOutCubic');
+    $rightVi.stop().animate({'left':'-'+52.5 +'%'},500,'easeInOutCubic');
     $leftWi.stop().animate({
       'left':0,
       'padding-left':0,
       'opacity':1
     },500,'easeInOutCubic');
     $leftCi.stop().animate({'background-position': '0%'},800,'easeInOutCubic');
-    $rightVi.stop().animate({'left':'-'+52.5 +'%'},500,'easeInOutCubic');
     $right.stop().css({'background-color':'#fe1'});
     $arrL.stop().animate({'opacity':0,'left':3+'%'
     });
