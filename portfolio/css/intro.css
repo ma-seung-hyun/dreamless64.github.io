@@ -1,14 +1,23 @@
 /*transition*/
 .intro_imgbox-rightbox,
-.nav_toggleBtn
+.nav_toggleBtn,
+.mobile_p
 {transition:all 0.3s ease;}
+.mobile_a
+{transition:all 0.3s ease-in-out;}
+.nav_item a,
+.nav_item a::before
+{transition:all 0.5s ease-in-out;}
 
+.textdel{font-size: 0; color: transparent; text-indent: -9999px;}
 html{height: 100%;}
 body{
+  width: 100%; height: 100%;
   font-weight: lighter;
-  height: 100%;
   letter-spacing: -1px;
+  overflow: hidden;
 }
+
 section.section_intro{height: 100%; position: relative;}
 
 nav{
@@ -31,7 +40,35 @@ nav{
 }
 .nav_toggleBtn:hover{right: 34px; opacity: 1;}
 .nav_toggleBtn.active{background-position: -50px 0; opacity: 1;}
-
+.nav_ul{
+  text-align: center;
+  width: 100%;
+  position: absolute; top: 0;
+}
+.nav_item{
+  letter-spacing: 15px;
+  text-indent: -2px;
+  font-size: 30px;
+  margin: 5%;
+}
+.nav_item a{
+  font-weight: lighter;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1% 3%;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.nav_item a::before{
+  content:'';
+  width: 0%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.64);
+  display: inline-block;
+  position: absolute; top: 0; left: -20%;
+  transform: skew(-30deg);
+}
+.nav_item a:hover::before{width: 160%;}
 h1{
   letter-spacing: 4px;
   width: 100%;
@@ -208,6 +245,7 @@ h1::before, h1::after{
 .intro_imgbox-rightbox:hover .intro_imgbox-rightbox-v_img{filter: grayscale(40%);}
 
 
+.intro_mobilebox{display: none;}
 
 @media screen and (min-width: 640px) and (max-width:840px){
   .intro_imgbox-box_h{
@@ -231,6 +269,7 @@ h1::before, h1::after{
   }
 }
 @media screen and (max-width: 639px) {
+  /*body{opacity: 0.5;}*/
   .intro_imgbox{
     width: 100%; height: 100%;
     position: absolute;
@@ -239,27 +278,118 @@ h1::before, h1::after{
   }
   .nav_toggleBtn{
     top: 32px; right: 5px;
-    transform: scale(0.8);
-  }
-  .nav_toggleBtn.active{
-    top: 6px; right: 5px;
-  }
-  .nav_toggleBtn:hover{
-    right: 5px;
-  }
+    transform: scale(0.8);}
+  .nav_toggleBtn.active{top: 6px; right: 5px;}
+  .nav_toggleBtn:hover{right: 5px;}
   h1{
-    /*display: none;*/
     top: 0;
     background-color: rgba(28, 28, 28, 0.9);
     color: #fff;
     padding: 5px 0;
     font-size: 14px;
+    z-index: 10;
   }
-  h1::before, h1::after{
-    display: none;
+  h1::before, h1::after{display: none;}
+  .intro_imgbox{display: none;}
+  .intro_imgbox .intro_imgbox-leftbox-v_img{
+    /*display: none;*/
   }
-  .intro_imgbox-leftbox-v_img,
-  .intro_imgbox-rightbox-v_img{
+  .intro_mobilebox{
+    display: block;
+    width: 100%; height: 100%;
+    position: relative;
+  }
+  .mobilebox_bg{
+    width: 100%; height: 100%;
+    background: url(../img/intro_v_mobile.png) no-repeat;
+    background-size: contain;
+    background-position:center bottom;
+    position: absolute; bottom: 0;
+    z-index: 2;
+    filter: grayscale(40%);
+  }
+  .mobilebox_bgcolor{
+    float: right;
+    width: 49.2%; height: 100%;
+    background: #fff13e;
+    z-index: 1;
+  }
+  .mobile_link{
+    height: 100%;
+  }
+  .mobile_linkbox{
+    height: 100%;
+    position: absolute;z-index: 5;
+    display: inline-block;
+    background: rgba(255, 241, 62, 0.2);
+    text-align: center;
+    cursor: pointer;
+  }
+  .mobile_linkbox.active{
+    opacity: 1;
+  }
+  .mobile_linkbox.active .mobile_p{
+    opacity: 0;
+  }
+  .mobile_linkbox:first-child{width: 50.8%;left: 0;}
+  .mobile_linkbox:last-child{width: 49.2%;right: 0;}
+  .mobile_p{
+    width: 100%;
+    position: absolute;top: 47%;
+    font-size: 13vw;
+    font-weight: bold;
+    transform: rotate(90deg);
+    letter-spacing: 20px;
+  }
+  .mobile_linkbox:first-child .mobile_p{
+    color: #192132;
+    text-shadow: 0 0 20px rgba(186, 186, 186, 0.73);
+  }
+  .mobile_linkbox:last-child .mobile_p{
+    color: #fff;
+    text-shadow: 0 0 20px rgba(186, 186, 186, 0.73);
+  }
 
+  .mobile_a{
+    display: inline-block;
+    width: 100%; height: 100%;
+    position: absolute; top: 0;
+    background-color: rgba(112, 112, 112, 0.85);
   }
-}
+  .mobile_linkbox:first-child .mobile_a{left: -100%;}
+  .mobile_linkbox:last-child .mobile_a{right: -100%;}
+  .mobile_linkbox.active:first-child .mobile_a{left: 0;}
+  .mobile_linkbox.active:last-child .mobile_a{right: 0;}
+
+  .mobile_hbox{
+    width: 100%; display: block;
+    position: absolute; top: 45%;
+    color: #fff;
+    font-size: 8vw; font-weight: bold;text-align: center;
+    letter-spacing: -2px;
+    line-height: 1em;
+  }
+  .mobile_hbox p{
+    margin-top: 12px;
+    font-weight: normal; font-size: 5vw ;
+  }
+  .mobile_hbox::before{
+    display: block;
+    margin: 0 auto;
+    content: '';
+    width: 60px; height: 60px;
+    background: url(../img/icons.png) no-repeat;
+    background-size: 200%;
+  }
+  .mobile_linkbox:first-child .mobile_hbox::before{
+    margin-bottom: 10px;
+    background-position: -0px -360px;
+  }
+  .mobile_linkbox:last-child .mobile_hbox::before{
+    margin-bottom: 15px;
+    background-position: -60px -120px;
+  }
+  .intro_nickname{
+    font-size: 30px; top: 30%;
+  }
+}/*meida*/
