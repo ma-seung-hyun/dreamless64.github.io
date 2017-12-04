@@ -1,0 +1,89 @@
+
+body, html{
+  height: 100%;
+}
+header{
+  width: 100%; height: 100%;
+  background: url(../img/value_bg.jpeg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  box-sizing: border-box;
+  border: 10px solid #fe1;
+  text-align: center;
+}
+header h1{
+  font-size: 40px;
+  font-weight: lighter;
+}
+header .hbox{
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+}
+section.section_redqueen{
+}
+/*section{
+  height: 100%;
+}
+section.section_redqueen{
+  height: 100%;
+}
+section{
+  height: 80%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+section > div{
+  position: relative;
+  width: 50%;
+}
+section > div > div{
+}
+.sec_left_item > div{
+  float: right;
+}
+.sec_right_item > div{
+  float: left;
+}
+.item_imgbox{
+  width: 70%; height: 100%;
+  margin: 0 10%;
+}
+.redqueen_item > span:first-of-type{
+  position: absolute;
+  display: inline-block;
+  width: 250px; height: 250px;
+  top: 40%; left: 60%;
+  background-color: #fe1;
+  border-radius: 200px;
+  z-index: -1;
+}
+.redqueen_item > span:first-of-type::before{
+  width: 90px; height:90px;
+  content: '';
+  display: inline-block;
+  top: calc(50% - 45px); left:calc(50% - 45px);
+  position: absolute;
+  border-radius: 200px;
+  background-color: #fff;
+}
+
+.item_textbox{
+  width: 70%;
+  border: 1px solid #000;
+  margin: 0 10%;
+}
+
+.sec_right_item{
+}
+.sec_left_item{
+}
+
+.redqueen_item .item_imgbox{
+  background: url(../img/value_redqueen4.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+}*/

@@ -15,7 +15,7 @@ font-family: 'Open Sans', sans-serif;
 */
 
 /*나눔고딕*/
-/*@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');*/
+@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 /*
 font-family: 'Nanum Gothic', sans-serif;
  */
@@ -44,9 +44,8 @@ body{
   /*overflow-x:hidden; overflow-y:auto;*/
 
   /*font-family: 'Noto Sans KR', sans-serif;*/
-  font-family: 'YoonGothic740', sans-serif;
-  font-family: 'Open Sans', sans-serif;
-
+  /*font-family: 'YoonGothic740', sans-serif;*/
+  font-family: 'Open Sans','Nanum Gothic', sans-serif;
 }
 
 html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,button,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time,menu,select,legend{margin:0;padding:0}
