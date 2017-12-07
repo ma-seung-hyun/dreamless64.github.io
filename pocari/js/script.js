@@ -69,6 +69,9 @@ var readyFunc = function(){
   itemSize();
   h1Blank();
 };
+$(document).ready(function(){
+  scoreSet();
+}
 readyFunc();
 });//ready
 })(jQuery);
