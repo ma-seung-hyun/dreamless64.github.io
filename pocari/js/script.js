@@ -19,7 +19,7 @@ var itemSize = function(){
 
   $item.height(ulH/15.5);
 
-  var cwrpT = winH/2 - $cwrp.height()/2,
+  var cwrpT = winH/2 - $cwrp.outerHeight()/2,
       cwrpL = $win.width()/2 - $cwrp.outerWidth()/2;
 
   $cwrp.css({
@@ -41,11 +41,30 @@ var h1Blank = function(){
 };
 // console.log($h1.find('.h1_p').eq(1));
 
+var scoreSet = function(){
+  var scoreArr = [
+    ["name","score"],
+    ["name2","score2"],
+    ["name3","score3"],
+    ["name4","score4"],
+    ["name5","score5"],
+    ["name6","score6"],
+    ["name7","score7"],
+    ["name8","score8"],
+    ["name9","score9"]
+  ];
+  for(var i = 0; i < scoreArr.length; ++i){
+    $('.rank_item').eq(i+1).find('.item_name').text(scoreArr[i][0]);
+    $('.rank_item').eq(i+1).find('.item_score').text(scoreArr[i][1]);
+  };
+}
 // document
 var resizeFunc = function(){
   itemSize();
 }
 var readyFunc = function(){
+  scoreSet();
+
   $win.resize(resizeFunc);
   itemSize();
   h1Blank();
