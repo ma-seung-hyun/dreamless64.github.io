@@ -26,9 +26,11 @@ var itemSize = function(){
     'top': cwrpT,
     'left': cwrpL
   });
+
   $inItem.css({
     'margin-top': $item.height()/2 - $inItem.height()/2
   })
+  // console.log()
 };
 
 var h1Blank = function(){
@@ -37,7 +39,7 @@ var h1Blank = function(){
   // };
   var h1Interval = setInterval(function(){
     $h1.find('.h1_p').eq(1).toggleClass('blank');
-  }, 700);
+  },700);
 };
 // console.log($h1.find('.h1_p').eq(1));
 
@@ -69,9 +71,7 @@ var readyFunc = function(){
   itemSize();
   h1Blank();
 };
-$(document).ready(function(){
-  scoreSet();
-}
+
 readyFunc();
 });//ready
 })(jQuery);
