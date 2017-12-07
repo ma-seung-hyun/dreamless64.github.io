@@ -84,6 +84,7 @@ h1 p:first-child{
 .item_name{
   position: relative;
   bottom: 4px;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 .rank_item:first-child .item_name{
   bottom: 0;
