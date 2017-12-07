@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 var reloadInterval = setInterval(function(){
   window.location.reload();
-},300000);
+},120000);
 
 var $win = $(window),
     $ul = $('.rank_ul'),
