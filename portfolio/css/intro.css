@@ -114,36 +114,36 @@ section.section_intro{height: 100%; position: relative;}
 .intro_imgbox-box_h{
   position: absolute;
   z-index: 5;
-  font-size: 70px;
+  font-size: 6.6vw;
   font-weight: bold;
-  letter-spacing: -5px;
-  line-height: 70px;
-  /*text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.35);*/
+  letter-spacing: -0.05em;
+  line-height: 0.93em;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
 }
 .intro_imgbox-leftbox .intro_imgbox-box_h{
-  top: 50px; left: 10%;
+  top: 10%; left: 12%;
   color: #222;
   text-align: left;
 }
 .intro_imgbox-rightbox .intro_imgbox-box_h{
   text-align: right;
-  bottom: 50px; right: 10%;
+  bottom: 10%; right: 12%;
   color: #fff;
 }
 .intro_imgbox-box_img{
   position: absolute;
   display: inline-block;
-  width: 50px; height: 50px;
+  width: 26%;
   background: url(../img/icons.png) no-repeat;
-  background-size: 100px;
+  background-size: 200%;
 }
 .intro_imgbox-leftbox .intro_imgbox-box_img{
-  top: 12px; right: 44px;
-  background-position: 0 -100px;
+  background-position: 0 34%;
+  top: 2%; left: 66%;
 }
 .intro_imgbox-rightbox .intro_imgbox-box_img{
-  bottom: 6px; left: -60px;
-  background-position: -50px -100px;
+  background-position: 100% 34%;
+  bottom: -5%; right: 108%;
 }
 .intro_imgbox-leftbox-white_img{
   width: 48.12%; height: 110%;
@@ -246,23 +246,23 @@ section.section_intro{height: 100%; position: relative;}
 
 @media screen and (min-width: 640px) and (max-width:840px){
   .intro_imgbox-box_h{
-    font-size: 50px;
-    line-height: 54px;
+    /*font-size: 50px;
+    line-height: 54px;*/
   }
   .intro_textbox{
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
     color: #6c6c6c;
   }
   .intro_imgbox-box_img{
-    transform: scale(0.7);
+    /*transform: scale(0.7);*/
   }
   .intro_imgbox-leftbox .intro_imgbox-box_img{
-    top: 3px; right: 22px;
-    background-position: 0 -100px;
+    /*top: 3px; right: 22px;*/
+    /*background-position: 0 -100px;*/
   }
   .intro_imgbox-rightbox .intro_imgbox-box_img{
-    bottom: 0px; left: -50px;
-    background-position: -50px -100px;
+    /*bottom: 0px; left: -50px;*/
+    /*background-position: -50px -100px;*/
   }
 }
 @media screen and (max-width: 639px) {

@@ -69,6 +69,7 @@ $secIntro = $('.section_intro'),
 $h1 = $('h1'),
 $nick = $('.intro_nickname'),
 $imgbox = $('.intro_imgbox'),
+  $imgboxImg = $('.intro_imgbox-box_img'),
   $arr = $('.intro_imgbox .intro_arrowbox'),
   $left = $('.intro_imgbox-leftbox'),
     $leftVi = $('.intro_imgbox-leftbox-v_img'),
@@ -147,7 +148,9 @@ var commonPos = function(){
   //     'margin-top':winH/2 - secTextboxArr[i].outerHeight()/2
   //   });
   // };
-
+  $imgboxImg.css({
+    'height': $imgboxImg.width()
+  })
 };
 
 var navFunc = function(){
@@ -192,7 +195,7 @@ var introInteraction = function(){
       });
       $boxHR.stop().animate({
         'opacity':1,
-        'right':10+'%'
+        'right':12+'%'
       });
     });
     $right.on('mouseenter', function(){
@@ -214,7 +217,7 @@ var introInteraction = function(){
       $txtR.stop().animate({'opacity':1,'right':10+'%'},2000,'easeOutQuint');
       $boxHL.stop().animate({
         'opacity':1,
-        'left':10+'%'
+        'left':12+'%'
       });
       $boxHR.stop().animate({
         'opacity':0,
@@ -241,11 +244,11 @@ var introInteraction = function(){
     $txtR.stop().animate({'opacity':0,'right':3+'%'});
     $boxHL.stop().animate({
       'opacity':1,
-      'left':10+'%'
+      'left':12+'%'
     });
     $boxHR.stop().animate({
       'opacity':1,
-      'right':10+'%'
+      'right':12+'%'
     });
 
   });
