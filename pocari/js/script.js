@@ -43,18 +43,20 @@ var h1Blank = function(){
 };
 // console.log($h1.find('.h1_p').eq(1));
 
-var scoreSet = function(){
 
+
+
+var scoreSet = function(){
   var scoreArr = [
+    ["박현정","543"],
     ["유희재","481"],
-    ["김조원","326"],
-    ["name3","score3"],
-    ["name4","score4"],
-    ["name5","score5"],
-    ["name6","score6"],
-    ["name7","score7"],
-    ["name8","score8"],
-    ["name9","score9"]
+    ["이지원","429"],
+    ["신지원","365"],
+    ["김초원","326"],
+    ["name","score"],
+    ["name","score"],
+    ["name","score"],
+    ["name","score"],
   ];
 
   for(var i = 0; i < scoreArr.length; ++i){
