@@ -44,9 +44,10 @@ var h1Blank = function(){
 // console.log($h1.find('.h1_p').eq(1));
 
 var scoreSet = function(){
+
   var scoreArr = [
-    ["name","score"],
-    ["name2","score2"],
+    ["유희재","481"],
+    ["김조원","326"],
     ["name3","score3"],
     ["name4","score4"],
     ["name5","score5"],
@@ -55,6 +56,7 @@ var scoreSet = function(){
     ["name8","score8"],
     ["name9","score9"]
   ];
+
   for(var i = 0; i < scoreArr.length; ++i){
     $('.rank_item').eq(i+1).find('.item_name').text(scoreArr[i][0]);
     $('.rank_item').eq(i+1).find('.item_score').text(scoreArr[i][1]);
