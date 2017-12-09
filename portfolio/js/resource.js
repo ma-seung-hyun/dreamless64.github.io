@@ -41,11 +41,12 @@ var listClickShowToggle = function(){
   $listItem1.hover(function(){
     if(!$(this).hasClass('active')){
       var thi = $(this).index();
+
       $showItem.css({
-        'z-index': -9999
+        'z-index': '-9999'
       });
       $showItem.eq(thi).css({
-        'z-index': -9998
+        'z-index': '-9998'
       });
       $showItem.eq(thi).stop(true).animate({
         'left':'68px'
@@ -55,10 +56,10 @@ var listClickShowToggle = function(){
     if(!$(this).hasClass('active')){
       var thi = $(this).index();
       $showItem.css({
-        'z-index': -9999
+        'z-index': '-9999'
       });
       $showItem.eq(thi).css({
-        'z-index': -9998
+        'z-index': '-9998'
       });
       $showItem.eq(thi).stop(true).animate({
         'left':'0'
@@ -69,10 +70,10 @@ var listClickShowToggle = function(){
     if(!$(this).hasClass('active')){
       var thi = $(this).index()+5;
       $showItem.css({
-        'z-index': -9999
+        'z-index': '-9999'
       });
       $showItem.eq(thi).css({
-        'z-index': -9998
+        'z-index': '-9998'
       });
       $showItem.eq(thi).stop(true).animate({
         'left':'68px'
@@ -82,10 +83,10 @@ var listClickShowToggle = function(){
     if(!$(this).hasClass('active')){
       var thi = $(this).index()+5;
       $showItem.css({
-        'z-index': -9999
+        'z-index': '-9999'
       });
       $showItem.eq(thi).css({
-        'z-index': -9998
+        'z-index': '-9998'
       });
       $showItem.eq(thi).stop(true).animate({
         'left':'0'
@@ -112,7 +113,8 @@ var listClickShowToggle = function(){
         'left': '100%'
       },500,'easeOutCubic',function(){
         $showItem.not($showItem.eq(thi)).css({
-          'left':'0'
+          'left':'0',
+          'z-index': '-9999'
         });
       });
     };
@@ -213,7 +215,7 @@ function consoleText(words, id, colors) {
       target.innerHTML = words[0].substring(0, letterCount)
       letterCount += x;
     }
-  }, 20)
+  }, 25)
   window.setInterval(function() {
     if (visible === true) {
       con.className = 'console-underscore hidden'
