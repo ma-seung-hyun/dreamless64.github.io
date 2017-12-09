@@ -170,6 +170,7 @@ var navFunc = function(){
     };
   });
 };
+
 var introInteraction = function(){
   $imgbox.hover(function(){
     $left.on('mouseenter', function(){

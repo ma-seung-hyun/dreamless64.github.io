@@ -3,7 +3,7 @@
 .mobile_p
 {transition:all 0.3s ease;}
 .mobile_a
-{transition:all 0.3s ease-in-out;}
+{transition:all 0.5s ease-in-out;}
 
 html{height: 100%;}
 body{
@@ -126,24 +126,24 @@ section.section_intro{height: 100%; position: relative;}
   text-align: left;
 }
 .intro_imgbox-rightbox .intro_imgbox-box_h{
-  text-align: right;
+  text-align: left;
   bottom: 10%; right: 12%;
   color: #fff;
 }
 .intro_imgbox-box_img{
   position: absolute;
   display: inline-block;
-  width: 26%;
+  width: 23%;
   background: url(../img/icons.png) no-repeat;
   background-size: 200%;
 }
 .intro_imgbox-leftbox .intro_imgbox-box_img{
   background-position: 0 34%;
-  top: 2%; left: 66%;
+  top: 2%; right: -3%;
 }
 .intro_imgbox-rightbox .intro_imgbox-box_img{
   background-position: 100% 34%;
-  bottom: -5%; right: 108%;
+  bottom: 50%; left: 40%;
 }
 .intro_imgbox-leftbox-white_img{
   width: 48.12%; height: 110%;
@@ -276,8 +276,8 @@ section.section_intro{height: 100%; position: relative;}
   /*.nav_toggleBtn{
     top: 32px; right: 5px;
     transform: scale(0.8);}
-  .nav_toggleBtn.active{top: 6px; right: 5px;}
-  .nav_toggleBtn:hover{right: 5px;}*/
+    .nav_toggleBtn.active{top: 6px; right: 5px;}
+    .nav_toggleBtn:hover{right: 5px;}*/
   h1{
     top: 0;
     background-color: rgba(28, 28, 28, 0.9);
@@ -289,7 +289,6 @@ section.section_intro{height: 100%; position: relative;}
   h1::before, h1::after{display: none;}
   .intro_imgbox{display: none;}
   .intro_imgbox .intro_imgbox-leftbox-v_img{
-    /*display: none;*/
   }
   .intro_mobilebox{
     display: block;
@@ -328,15 +327,18 @@ section.section_intro{height: 100%; position: relative;}
   .mobile_linkbox.active .mobile_p{
     opacity: 0;
   }
+  .mobile_linkbox:nth-child(2) .mobile_p{
+  }
+
   .mobile_linkbox:first-child{width: 50.8%;left: 0;}
   .mobile_linkbox:last-child{width: 49.2%;right: 0;}
   .mobile_p{
     width: 100%;
     position: absolute;top: 47%;
-    font-size: 13vw;
+    font-size: 10vw;
     font-weight: bold;
     transform: rotate(90deg);
-    letter-spacing: 20px;
+    letter-spacing: 10px;
   }
   .mobile_linkbox:first-child .mobile_p{
     color: #192132;
@@ -362,13 +364,13 @@ section.section_intro{height: 100%; position: relative;}
     width: 100%; display: block;
     position: absolute; top: 45%;
     color: #fff;
-    font-size: 8vw; font-weight: bold;text-align: center;
+    font-size: 6vw; font-weight: bold;text-align: center;
     letter-spacing: -2px;
     line-height: 1em;
   }
   .mobile_hbox p{
     margin-top: 12px;
-    font-weight: normal; font-size: 5vw ;
+    font-weight: normal; font-size: 3.5vw ;
   }
   .mobile_hbox::before{
     display: block;

@@ -15,7 +15,7 @@ nav{
 }
 .nav_toggleBtn{
   z-index: 9999;
-  position: fixed; right: 24px; top: 20px;
+  position: fixed; right: 26px; top: 26px;
   display: inline-block;
   cursor: pointer;
   width: 30px; height: 30px;
@@ -26,6 +26,8 @@ nav{
 }
 .nav_toggleBtn:hover{right: 30px; opacity: 1;}
 .nav_toggleBtn.active{background-position: -30px 0; opacity: 1;}
+.nav_toggleBtn.white{background-position: 0 -120px; opacity: 1;}
+.nav_toggleBtn.white.active{background-position: -30px -120px; opacity: 1;}
 .nav_ul{
   text-align: center;
   width: 100%;
@@ -60,8 +62,16 @@ nav{
 
 @media screen and (max-width: 639px) {
   .nav_toggleBtn{
-    top: 32px; right: 5px;
-    transform: scale(0.8);}
-  .nav_toggleBtn.active{top: 6px; right: 5px;}
-  .nav_toggleBtn:hover{right: 5px;}
+    top: 36px; right: 10px;
+    transform: scale(1.2);
+  }
+  .nav_toggleBtn.active{top: 10px; right: 15px;}
+  .nav_toggleBtn:hover{right:15px;}
+  .nav_toggleBtn.white{
+    top: 10px;
+    background-position: 0 0;
+  }
+  .nav_toggleBtn.white.active{
+    background-position: -30px 0;
+  }
 }

@@ -14,6 +14,18 @@ font-family: 'Noto Sans KR', sans-serif;
 font-family: 'Open Sans', sans-serif;
 */
 
+/*ROBOTO*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+/*
+font-family: 'Roboto', sans-serif;
+*/
+
+/*LATO*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+/*
+font-family: 'Lato', sans-serif;*/
 /*나눔고딕*/
 @import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 /*
@@ -38,6 +50,7 @@ font-family: 'Nanum Myeongjo', serif;
    font-weight: 500;
    font-style: normal;
  }
+
 /*reset*/
 
 body{
@@ -46,13 +59,16 @@ body{
   /*font-family: 'Noto Sans KR', sans-serif;*/
   /*font-family: 'YoonGothic740', sans-serif;*/
   /*font-family: 'Open Sans','Nanum Gothic', sans-serif;*/
-  font-family: 'Noto Sans KR', sans-serif;
-
+  /*font-family: 'Roboto','Noto Sans KR' , sans-serif;*/
+  font-family: 'Lato','Noto Sans KR' , sans-serif;
 }
 
 html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,button,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time,menu,select,legend{margin:0;padding:0}
 a{text-decoration: none;}
 li{list-style: none;}
+.textdel{
+  font-size: 0; text-indent: -9999px; color: transparent;
+}
 
 
 /* ---- RESET ---- */
