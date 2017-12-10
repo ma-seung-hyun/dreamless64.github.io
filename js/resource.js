@@ -119,7 +119,7 @@ var listClickShowToggle = function(){
           'z-index': '-9999'
         });
       });
-      $showItem.find('.show_rel').load('source/showitem.html .show_innder_' + thi);
+      // $showItem.find('.show_rel').load('source/showitem.html .show_innder_' + thi);
     };
   });
 
