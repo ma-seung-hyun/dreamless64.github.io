@@ -89,9 +89,9 @@ section.sec_list::-webkit-scrollbar{
 .category:nth-of-type(1) .list_item:nth-child(2):hover,
 .category:nth-of-type(1) .list_item:nth-child(2).active{color: #1c1c1f;}
 .category:nth-of-type(1) .list_item:nth-child(3):hover,
-.category:nth-of-type(1) .list_item:nth-child(3).active{color: #FBAF00;}
+.category:nth-of-type(1) .list_item:nth-child(3).active{color: #00bffb;}
 .category:nth-of-type(1) .list_item:nth-child(4):hover,
-.category:nth-of-type(1) .list_item:nth-child(4).active{color: #0b4936;}
+.category:nth-of-type(1) .list_item:nth-child(4).active{color: #379679;}
 .category:nth-of-type(1) .list_item:nth-child(5):hover,
 .category:nth-of-type(1) .list_item:nth-child(5).active{color: #87CEFA;}
 .category:nth-of-type(2) .list_item:nth-child(1):hover,

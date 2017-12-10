@@ -20,8 +20,8 @@ var colorSetting = function(){
   var colorArr = [
     '#1990ff',//w
     '#1c1c1f',//w
-    '#FBAF00',
-    '#0b4936',
+    '#80d9ff',
+    '#45544c',
     '#d5efff',
     '#eb3c7a',
     '#121738',
