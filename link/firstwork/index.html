@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+<body>
+<div id="wrp">
+<!-- wrp -->
+<div class="content_nav">
+
+  <div id="header">
+    <div id="gnb">
+      <strong>LOGO</strong>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Plans</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Serch</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+<section class="content_main">
+  <article>
+    <div class="bg">
+    </div>
+    <div id="h1div">
+      <div>
+
+        <h1>첫번째 분석연습: MARK UP</h1>
+        <p>몰라도 솔직하게. <br>에이전시 D.Fy의 작업물 마크업 / 시멘틱 분석 및 <br>나의 스타일과 비교,흡수해보기.</p>
+        <a href="https://symu.co/freebies/templates-4/enyo-psd-template/" target="_blank" class="btn"><span></span>디자인 원본</a>
+      </div>
+    </div>
+  </article>
+  <div class="vs_txt">
+    <p>시멘틱태그를안쓴다</p>
+  </div>
+</section>
+
+<section class="content_2">
+  <article class="cwrp">
+    <div class="txtdiv">
+      <h2>구획은 일단 DIV.</h2>
+      <p>
+        어째서인지 header나 nav같은 시멘틱 태그로 문서를 구성하지 않은 모습이 1차적으로 눈에 띄었습니다. <br>
+        그래도 id와 class의 네이밍으로 이런 구조를 모두 세세하게 구분하고 있었습니다. <br>
+        헤더 이후의 메인 콘텐츠들은 section > article > div 순으로 뎁스 관계를 설정해 두었으며 <br>
+        h1의 설정을 로고가 아닌 문서 전체의 가장 상위뎁스 항목에 두었습니다.
+      </p>
+      <ol>
+        <li><span></span>따로 사용하지 않는 reset css. 역시 커스텀이 중요.</li>
+        <li><span></span>모든 문서를 .warp으로 감싸고 시작한다. flex를 사용? </li>
+        <li><span></span>네비게이션 영역이 window의 전체 사이즈? 이유는 무엇일까</li>
+      </ol>
+      <a class="btn" href="http://www.samsung.com/global/galaxy/gear-s3/" target="_blank">해당 페이지</a>
+    </div>
+    <div class="img_mac"></div>
+  </article>
+</section>
+
+<section class="content_3">
+  <article class="cwrp">
+    <ul>
+      <li>
+        <span></span>
+        <dl>
+          <dt>INLINE</dt>
+          <dd>
+            스타일을 작성할때, 셀렉터와 내용은 줄바꿈을 하지만 속성과 값은 인라인형태로의 작성을 하는 모습입니다.
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <span></span>
+        <dl>
+          <dt>STYLE SCOPED</dt>
+          <dd>
+           네비게이션등을 제외한 메인 컨텐츠에 해당하는 부분에서의 스타일은 scoped속성이 적용된 style태그로 구분해서 사용했습니다.
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <span></span>
+        <dl>
+          <dt>POSITION</dt>
+          <dd>
+            position속성을 제 기준보다 많이 사용하는 느낌입니다. 개인적으로는 서로가 맞닿아있는 웹의 형태가 가장 이상적이라고 생각해 사용은 하되 최대한 지양하고 있습니다.
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <span></span>
+        <dl>
+          <dt>MEDIA QUERY</dt>
+          <dd>
+            완벽한 적응형이 아닌 반응형 이미지 변경 요소들이 있지만 media query를 사용하진 않은걸보아 스크립트나 다른 방식으로 동작하게 한 모양입니다.
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <span></span>
+        <dl>
+          <dt>IMG &#38; FIGURE</dt>
+          <dd>
+            img 태그를 그냥 쓰는법이 없습니다. 대부분 figure 태그로 한번 감싸주고, figcaption 태그를 사용하지 않는 경우에도 어김없이 한번 감싸주는 형태입니다.
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <span></span>
+        <dl>
+          <dt>! IMPORTENT</dt>
+          <dd>
+            스크립트로 엘리먼트에 직접 스타일을 입력하는것 이상으로 우선순위를 매길만한 상황이 이렇게 많았는지 몰랐습니다. 약 200여개의 !importent가 사용되었습니다.
+          </dd>
+        </dl>
+      </li>
+
+    </ul>
+  </article>
+</section>
+
+<section class="content_4">
+  <article class="cwrp">
+      <h2>모르는부분, 공부가 필요하다.</h2>
+      <div>
+        <div class="leftside">
+          <span class="circle">
+            <span class="circle_h"></span>
+          </span>
+          <span class="dashbar"></span>
+
+          <span class="circle">
+            <span class="circle_h"></span>
+          </span>
+          <span class="dashbar"></span>
+          <dl>
+            <dt>data-role</dt>
+            <dd>변경값을 스크립트에서 사용하게끔 <br> 고유한 data값들. 종류도 너무많고해서 잘 짐작이 가진 않습니다.<dd>
+          </dl>
+          <dl>
+            <dt>이미지 성격 판단</dt>
+            <dd>프로젝트 성격상 모두 '정보형' 이미지라고 판단했는지 background-image 대신 전부 img태그를 사용했습니다. </dd>
+          </dl>
+
+        </div>
+        <div class="rightside">
+          <span class="circle">
+            <span class="circle_h"></span>
+          </span>
+          <span class="dashbar"></span>
+          <span class="circle">
+            <span class="circle_h"></span>
+          </span>
+          <span class="dashbar"></span>
+          <dl>
+            <dt>연동 마크업</dt>
+            <dd>스크립트 애니메이션 효과를 염두에두고 해당 애니메이션에 가장 적합한 형태로의 마크업을 진행했습니다.<dd>
+          </dl>
+          <dl>
+            <dt>알수없는 table</dt>
+            <dd>모든 문서 하단에 알수없는 table태그가 있습니다. tbod,tr,td등 필요한 태그들도 채워진것을 보니 어떤 용도가 있는것이 분명해보입니다. </dd>
+          </dl>
+        </div>
+      </div>
+  </article>
+</section>
+
+
+
+<section class="content_5">
+  <article class="cwrp">
+    <h2>찾아낸 몇가지</h2>
+    <p>마크업 쪽 코드를 둘러보고 난 후 .<br> 나의 초보적 시선으로 의식한점 3가지
+    </p>
+    <ul>
+      <li>
+        <p>공백이 생각보다 많다..</p>
+        <strong>245줄</strong>
+        <p>common.css 파일 기준</p>
+      </li>
+      <li>
+        <p>설명이 아닌 태그와 코드 주석처리</p>
+        <strong>17개</strong>
+        <p>index.html 기준</p>
+      </li>
+      <li>
+        <p>rem, vw, vh의 단위 사용 전무!</p>
+        <strong>0개</strong>
+        <p>common.css 파일 기준</p>
+      </li>
+    </ul>
+    <div><span class="ic c5_1"></span></div>
+    <h3>QUESTIONS</h3>
+    <p>
+      공백보다는 주석이 낫다고 알고있었는데, 역시 코드 가독성이 좋은 공백을 사용하는것인가? <br>
+      설명단이 아닌 태그,코드 부분에도 주석이 아직 붙어있는모습. 스크립트로 뗐다 붙였다 제어? <br>
+      최상위 단위 대신 전부 상속단위만 사용. 뷰포트 관련은 CSS에서는 쓰지않는것인가?
+    </p>
+    <ul>
+      <li>
+        <span class="ic c5_2" ></span>
+        dreamless64@gmail.com
+      </li>
+      <li>
+        <span class="ic c5_3"></span>
+        010-4945-1051
+      </li>
+    </ul>
+  </article>
+</section>
+
+<section class="content_6">
+  <article class="cwrp">
+    <h2>보물찾기는 아니었다.</h2>
+    <p>이번 분석을 통해 새롭게 알게된것은 새로운 참신한 기술이라기보다는 <br>내가 기존에 알고있던 스킬들로도 노력투자를 통해 충분히 고품질의 마크업을 해낼 수 있다는 것입니다.</p>
+    <a href="#" class="btn">메인으로</a>
+  </article>
+  <div class="bg"></div>
+</section>
+
+</div><!-- wrp -->
+<script src="js/script.js"></script>
+</body>
+
+</html>
