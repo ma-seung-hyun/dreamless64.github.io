@@ -279,9 +279,10 @@ iframe::-webkit-scrollbar{display: none;}
   padding-bottom: 45px;
 
 }
-.show_goto i.fa{
+.show_goto i.fa-arrow-right{
   animation: gotoAni 2s infinite ease;
 }
+
 @keyframes gotoAni {
   0%, 100% {
     margin-left: 10px;
@@ -290,6 +291,8 @@ iframe::-webkit-scrollbar{display: none;}
     margin-left: 40px;
   }
 }
+
+
 
 
 
