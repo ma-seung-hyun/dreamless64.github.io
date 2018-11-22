@@ -7,20 +7,29 @@
   <title>Document</title>
   <style>
     input{
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       outline: none;
+      width: 50px;
+      height: 20px;
     }
     input:focus{
-    background : #d3d;
+      background : #d3d;
+      color: #fff
+		  border: 2px solid #000;
     }
     input[type=text]{
-      border: 1px solid #d3d;
+      border: 2px solid #d3d;
     }
     input[type=password]{
-      border: 1px solid #3d3;
+      border: 2px solid #3d3;
     }
     input[type=tel]{
-      border: 1px solid #1bb;
+      border: 2px solid #1bb;
+    }
+    .fix{
+      position: fixed;
+      top:0;
+      right:0;
     }
   </style>
 </head>
@@ -44,6 +53,33 @@
   <input type="tel" placeholder="tel">
   <br>
 
+  <div id="fix">
+	<p id="p1">scrollTop  : <span></span></p>
+	<p id="p2">focus : <span></span></p>
+  </div>
+  <script>
+    var p1 = document.querySelector('#fix #p1 span')
+  ,	p2 = document.querySelector('#fix #p2 span')
+;
+    var input = document.getElementsByTagName('input');
+document.addEventListener('scroll', function(){
+	writeScrollTop();
+});
+document.addEventListener('touchmove', function(){
+	writeScrollTop();
+});
+for(var i = 0; i < input.length; ++i){
+	input[i].addEventListener('focus', function(){
+		p2.innerText = 'ON'
+	});
+	input[i].addEventListener('blur', function(){
+		p2.innerText = 'OFF'
+	});
+};
 
+var writeScrollTop = function(){
+	p1.innerText = document.documentElement.scrollTop;
+};
+  </script>
 </body>
 </html>
