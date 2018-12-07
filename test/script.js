@@ -46,8 +46,6 @@ var resultDisplay = document.getElementsByClassName('result-display')[0]
 ,   restaurantAddDisplay = document.getElementsByClassName('restaurant-add-display')[0]
 ;
 
-
-
 // ajax
 var dataObject;
 function getDataAjax(){
@@ -62,7 +60,13 @@ function getDataAjax(){
   jsonhttp.send();
 };
 
-
+function getRandomValue(json){
+  var value;
+  var i;
+  for(var key in dataObject){};
+  console.log(key);
+  return value;
+};
 
 function resultDisplayPosition(){
   var w = window.innerHeight/2 - resultDisplay.css('height')/2 -10;
@@ -85,6 +89,7 @@ function listBtnToggle(){
     listBtn.classList.add('open');
   };
 };
+
 function listDisplayToggle(){
   if(listDisplay.classList.contains('open')){
     listDisplay.classList.remove('open');
@@ -92,7 +97,6 @@ function listDisplayToggle(){
     listDisplay.classList.add('open');
   };
 };
-
 
 function resultValueAction(){
   var sto,sto2;
@@ -121,7 +125,6 @@ function listBtnTouchstart(){
     listDisplayToggle();
   });
 };
-
 
 function cssClassEvent(){
   decisionBtnTouchstart();
