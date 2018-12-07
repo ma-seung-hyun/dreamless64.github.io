@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 *{margin: 0; padding: 0;}
 li{list-style: none;}
+button,button:focus{
+  outline: none;
+  border: none;
+}
 html,body{
   height: 100%; overflow: hidden;font-family: 'Noto Sans KR', sans-serif;
   letter-spacing: -2px;
