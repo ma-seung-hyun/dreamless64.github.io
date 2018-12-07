@@ -46,6 +46,28 @@ var resultDisplay = document.getElementsByClassName('result-display')[0]
 ,   restaurantAddDisplay = document.getElementsByClassName('restaurant-add-display')[0]
 ;
 
+// ajax
+function getDataAjax(){
+  var jsonhttp;
+  if (window.XMLHttpRequest) {
+      jsonhttp = new XMLHttpRequest();
+  }else {
+      jsonhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  };
+
+  jsonhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+         //통신 성공시 구현부분
+         console.log(jsonhttp,1);
+    };
+  };
+  jsonhttp.open("GET", "data.json", true);
+  jsonhttp.send();
+  console.log(jsonhttp,2);
+}
+
+
+
 function resultDisplayPosition(){
   var w = window.innerHeight/2 - resultDisplay.css('height')/2 -10;
   resultDisplay.css('margin-top',w);
@@ -111,6 +133,7 @@ function cssClassEvent(){
 };
 
 window.addEventListener('DOMContentLoaded', function(){
+  getDataAjax();
   cssClassEvent();
   resultDisplayPosition();
 });
