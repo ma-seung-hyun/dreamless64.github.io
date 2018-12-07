@@ -53,7 +53,7 @@ function getDataAjax(){
   jsonhttp = new XMLHttpRequest();
   jsonhttp.onreadystatechange = function() {
       if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
-           dataObject = JSON.parse(jsonhttp.response);
+        dataObject = JSON.parse(jsonhttp.response);
       };
   };
   jsonhttp.open("GET", "data.json", true);
@@ -61,11 +61,9 @@ function getDataAjax(){
 };
 
 function getRandomValue(json){
-  var value;
-  var i;
-  for(var key in dataObject){};
-  console.log(key);
-  return value;
+  var i = 0;
+  for(var key in json){++i;};
+  return Math.floor(Math.random() * i);
 };
 
 function resultDisplayPosition(){
@@ -103,7 +101,7 @@ function resultValueAction(){
   sto = setTimeout(function(){
     resultValue.classList.remove('conclusion');
     resultValue.classList.add('calculating');
-    // var randomValue = getRandomValue();
+    var randomValue = getRandomValue(dataObject);
     // writeInResultValue(randomValue);
   },400);
   sto2 = setTimeout(function(){
