@@ -46,6 +46,8 @@ var resultDisplay = document.getElementsByClassName('result-display')[0]
 ,   restaurantAddDisplay = document.getElementsByClassName('restaurant-add-display')[0]
 ;
 
+
+var dataObject;
 // ajax
 function getDataAjax(){
   var jsonhttp;
@@ -55,15 +57,10 @@ function getDataAjax(){
       jsonhttp = new ActiveXObject("Microsoft.XMLHTTP");
   };
 
-  jsonhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-         //통신 성공시 구현부분
-         console.log(jsonhttp,1);
-    };
-  };
-  jsonhttp.open("GET", "data.json", true);
+  jsonhttp.open("GET", "data.json");
   jsonhttp.send();
-  console.log(jsonhttp,2);
+
+  dataObject = JSON.parse(jsonhttp.response);
 }
 
 
@@ -103,9 +100,9 @@ function resultValueAction(){
   sto = setTimeout(function(){
     resultValue.classList.remove('conclusion');
     resultValue.classList.add('calculating');
+    // var randomValue = getRandomValue();
+    // writeInResultValue(randomValue);
   },400);
-  // var randomValue = getRandomValue();
-  // writeInResultValue(randomValue);
   sto2 = setTimeout(function(){
     resultValue.classList.remove('calculating');
     resultValue.classList.add('conclusion');
