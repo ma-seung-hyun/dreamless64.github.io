@@ -47,7 +47,7 @@ var resultDisplay = document.getElementsByClassName('result-display')[0]
 ;
 
 function resultDisplayPosition(){
-  var w = window.innerHeight/2 - resultDisplay.css('height')/2;
+  var w = window.innerHeight/2 - resultDisplay.css('height')/2 -10;
   resultDisplay.css('margin-top',w);
 };
 
