@@ -47,27 +47,20 @@ var resultDisplay = document.getElementsByClassName('result-display')[0]
 ;
 
 
-var dataObject;
+
 // ajax
+var dataObject;
 function getDataAjax(){
   var jsonhttp;
-  if (window.jsonhttpRequest) {
-      jsonhttp = new jsonhttpRequest();
-  }
-  else {
-      jsonhttp = new ActiveXObject("Microsoft.jsonhttp");
-  }
-
-  //Ajax구현부분
+  jsonhttp = new XMLHttpRequest();
   jsonhttp.onreadystatechange = function() {
       if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
-           //통신 성공시 구현부분
            dataObject = JSON.parse(jsonhttp.response);
-      }
-  }
+      };
+  };
   jsonhttp.open("GET", "data.json", true);
   jsonhttp.send();
-}
+};
 
 
 
