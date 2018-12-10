@@ -47,10 +47,9 @@ var resultDisplay = document.getElementsByClassName('result-display')[0]
 ;
 
 // ajax
-var dataObject;
+var dataObject, jsonhttp;
 
 function getDataAjax(){
-  var jsonhttp;
   jsonhttp = new XMLHttpRequest();
   jsonhttp.onreadystatechange = function() {
       if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
@@ -106,7 +105,6 @@ function listDisplayToggle(){
     listDisplay.classList.add('open');
   };
 };
-
 
 function writeInResultValue(ran){
   console.log(ran);
