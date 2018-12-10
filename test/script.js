@@ -161,7 +161,7 @@ window.addEventListener('DOMContentLoaded', function(){
   resultDisplayPosition();
   documentDraggableSet();
   getDataAjax();
-  configRestaurantList();
+  configRestaurantList(dataObject);
   cssClassEvent();
 });
 window.addEventListener('resize', function(){
