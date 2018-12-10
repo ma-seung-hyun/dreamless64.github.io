@@ -63,7 +63,7 @@ function getDataAjax(){
 function getRandomValue(json){
   var i = 0;
   for(var key in json){++i;};
-  return Math.floor(Math.random() * i);
+  return json[Math.floor(Math.random() * i)];
 };
 
 function resultDisplayPosition(){
@@ -107,6 +107,7 @@ function resultValueAction(){
   qu01 = setTimeout(function(){
     resultValue.classList.remove('conclusion');
     resultValue.classList.add('calculating');
+    getDataAjax();
     randomValue = getRandomValue(dataObject);
   },400);
   qu02 = setTimeout(function(){
