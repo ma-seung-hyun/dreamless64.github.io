@@ -158,10 +158,11 @@ function documentDraggableSet(){
 };
 
 window.addEventListener('DOMContentLoaded', function(){
+  resultDisplayPosition();
   documentDraggableSet();
   getDataAjax();
+  configRestaurantList();
   cssClassEvent();
-  resultDisplayPosition();
 });
 window.addEventListener('resize', function(){
   resultDisplayPosition();
