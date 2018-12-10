@@ -63,7 +63,7 @@ h1{
   margin-top: 70px;
   text-align: center;
 }
-.decision-btn button{
+.decision-btn .btn{
   outline: none;
   border: 5px solid #999;
   background-color: #999;
@@ -80,7 +80,7 @@ h1{
   cursor: pointer;
 }
 
-.decision-btn button::after{
+.decision-btn .btn::after{
   content : '';
   position: absolute;
   z-index: -1;
@@ -94,13 +94,13 @@ h1{
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 
 }
-.decision-btn button.touch{
+.decision-btn .btn.touch{
   background-color: #1890ff;
   border-color: #1890ff;
   bottom: 5px;
   font-weight: bold;
 }
-.decision-btn button.touch::after{
+.decision-btn .btn.touch::after{
   bottom: -10px;
   border: 5px solid #1e405e;
   background-color: #1e405e;

@@ -38,7 +38,7 @@ HTMLElement.prototype.css = function(prop,setValue){
 //DOMselect
 var resultDisplay = document.getElementsByClassName('result-display')[0]
 ,   resultValue = document.getElementsByClassName('result-value')[0]
-,   decisionBtn = document.querySelector('.decision-btn button')
+,   decisionBtn = document.querySelector('.decision-btn .btn')
 ,   listBtn = document.getElementsByClassName('list-btn')[0]
 ,   listDisplay = document.getElementsByClassName('list-display')[0]
 ,   restaurantAddBtn = document.getElementsByClassName('restaurant-add-btn')[0]
