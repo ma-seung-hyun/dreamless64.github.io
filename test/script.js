@@ -55,6 +55,7 @@ function getDataAjax(){
   jsonhttp.onreadystatechange = function() {
       if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
         dataObject = JSON.parse(jsonhttp.response);
+        dataObjectReady();
       };
   };
   jsonhttp.open("GET", "data.json", true);
@@ -151,6 +152,10 @@ function cssClassEvent(){
   listBtnTouchstart();
 };
 
+function dataObjectReady(){
+  configRestaurantList(dataObject);
+};
+
 function documentDraggableSet(){
   document.body.setAttribute('oncontextmenu','return false');
   document.body.setAttribute('ondragstart','return false');
@@ -161,7 +166,7 @@ window.addEventListener('DOMContentLoaded', function(){
   resultDisplayPosition();
   documentDraggableSet();
   getDataAjax();
-  configRestaurantList(dataObject);
+  dataObjectReady();
   cssClassEvent();
 });
 window.addEventListener('resize', function(){
