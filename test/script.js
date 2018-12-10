@@ -48,6 +48,7 @@ var resultDisplay = document.getElementsByClassName('result-display')[0]
 
 // ajax
 var dataObject;
+
 function getDataAjax(){
   var jsonhttp;
   jsonhttp = new XMLHttpRequest();
@@ -69,6 +70,15 @@ function getRandomValue(json){
 function resultDisplayPosition(){
   var w = window.innerHeight/2 - resultDisplay.css('height')/2 -10;
   resultDisplay.css('margin-top',w);
+};
+
+function configRestaurantList(json){
+  var restaurantListString = '';
+  for(var key in json){
+    var loopString  = '<li>' + json[key]['name'] + '</li>';
+    restaurantListString += loopString;
+  };
+  restaurantList.innerHTML = restaurantListString;
 };
 
 function decisionBtnAction(){
@@ -105,10 +115,10 @@ function writeInResultValue(ran){
 function resultValueAction(){
   var qu01,qu02;
   var randomValue;
+  getDataAjax();
   qu01 = setTimeout(function(){
     resultValue.classList.remove('conclusion');
     resultValue.classList.add('calculating');
-    getDataAjax();
     randomValue = getRandomValue(dataObject);
   },400);
   qu02 = setTimeout(function(){
