@@ -96,19 +96,29 @@ function listDisplayToggle(){
   };
 };
 
+
+function writeInResultValue(ran){
+  console.log(ran);
+}
+
 function resultValueAction(){
-  var sto,sto2;
-  sto = setTimeout(function(){
+  var qu01,qu02;
+  var randomValue;
+  qu01 = setTimeout(function(){
     resultValue.classList.remove('conclusion');
     resultValue.classList.add('calculating');
-    var randomValue = getRandomValue(dataObject);
-    // writeInResultValue(randomValue);
+    randomValue = getRandomValue(dataObject);
   },400);
-  sto2 = setTimeout(function(){
+  qu02 = setTimeout(function(){
+    writeInResultValue(randomValue);
     resultValue.classList.remove('calculating');
     resultValue.classList.add('conclusion');
   },1000);
 };
+
+
+
+
 
 function decisionBtnTouchstart(){
   decisionBtn.addEventListener('touchstart', function(){
@@ -129,7 +139,14 @@ function cssClassEvent(){
   listBtnTouchstart();
 };
 
+function documentDraggableSet(){
+  document.body.setAttribute('oncontextmenu','return false');
+  document.body.setAttribute('ondragstart','return false');
+  document.body.setAttribute('onselectstart','return false');
+};
+
 window.addEventListener('DOMContentLoaded', function(){
+  documentDraggableSet();
   getDataAjax();
   cssClassEvent();
   resultDisplayPosition();
